@@ -1,0 +1,33 @@
+# /etc/conf.d/bitphantomd: config file for /etc/init.d/bitphantomd
+
+# Config file location
+#bitphantomD_CONFIGFILE="/etc/bitphantom/bitphantom.conf"
+
+# What directory to write pidfile to?  (created and owned by $bitphantomD_USER)
+#bitphantomD_PIDDIR="/var/run/bitphantomd"
+
+# What filename to give the pidfile
+#bitphantomD_PIDFILE="${bitphantomD_PIDDIR}/bitphantomd.pid"
+
+# Where to write bitphantomd data (be mindful that the blockchain is large)
+#bitphantomD_DATADIR="/var/lib/bitphantomd"
+
+# User and group to own bitphantomd process
+#bitphantomD_USER="bitphantom"
+#bitphantomD_GROUP="bitphantom"
+
+# Path to bitphantomd executable
+#bitphantomD_BIN="/usr/bin/bitphantomd"
+
+# Nice value to run bitphantomd under
+#bitphantomD_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+#bitphantomD_OPTS=""
+
+# The timeout in seconds OpenRC will wait for bitphantomd to terminate
+# after a SIGTERM has been raised.
+# Note that this will be mapped as argument to start-stop-daemon's
+# '--retry' option, which means you can specify a retry schedule
+# here. For more information see man 8 start-stop-daemon.
+bitphantomD_SIGTERM_TIMEOUT=600
